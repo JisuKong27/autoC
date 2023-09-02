@@ -1,0 +1,14 @@
+# ASW/SConscript
+
+Import('env')  # 부모 SConstruct에서 생성한 환경 설정 가져오기
+
+# ASW 디렉터리 내의 소스 파일 리스트
+sources = ['testApp.c']
+sources += ['testApp2.c']
+
+
+# 빌드 타겟 정의
+target = env.Program(target='test', source=sources)
+
+# 빌드 명령 실행
+env.Default(target)
